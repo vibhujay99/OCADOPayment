@@ -4,8 +4,9 @@
   "description": "Online Product Management System using MERN Stack",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
-    "start-server": "nodemon server"
+    "server": "nodemon server.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "repository": {
     "type": "git",
@@ -18,8 +19,18 @@
   },
   "homepage": "https://github.com/ManulThisuraka/OCADO#readme",
   "dependencies": {
+    "@stripe/react-stripe-js": "^1.5.0",
+    "@stripe/stripe-js": "^1.18.0",
+    "body-parser": "^1.19.0",
+    "concurrently": "^6.2.1",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "html-pdf": "^3.0.1",
+    "jspdf": "^2.4.0",
+    "jspdf-autotable": "^3.5.20",
     "mongoose": "^5.13.7",
-    "nodemon": "^2.0.12"
+    "nodemon": "^2.0.12",
+    "stripe": "^8.176.0"
   }
 }
